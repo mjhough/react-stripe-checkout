@@ -389,43 +389,8 @@ export default class ReactStripeCheckout extends React.Component {
         onMouseUp={this.handleOnMouseUp}
         onMouseOut={this.handleOnMouseUp}
         onBlur={this.handleOnMouseUp}
-        style={Object.assign({}, {
-          overflow: 'hidden',
-          display: 'inline-block',
-          background: 'linear-gradient(#28a0e5,#015e94)',
-          border: 0,
-          padding: 1,
-          textDecoration: 'none',
-          borderRadius: 5,
-          boxShadow: '0 1px 0 rgba(0,0,0,0.2)',
-          cursor: 'pointer',
-          visibility: 'visible',
-          userSelect: 'none',
-        }, this.state.buttonActive && {
-          background: '#005d93',
-        }, this.props.style)}
       >
-        <span
-          style={Object.assign({}, {
-            backgroundImage: 'linear-gradient(#7dc5ee,#008cdd 85%,#30a2e4)',
-            fontFamily: '"Helvetica Neue",Helvetica,Arial,sans-serif',
-            fontSize: 14,
-            position: 'relative',
-            padding: '0 12px',
-            display: 'block',
-            height: 30,
-            lineHeight: '30px',
-            color: '#fff',
-            fontWeight: 'bold',
-            boxShadow: 'inset 0 1px 0 rgba(255,255,255,0.25)',
-            textShadow: '0 -1px 0 rgba(0,0,0,0.25)',
-            borderRadius: 4,
-          }, this.state.buttonActive && {
-            color: '#eee',
-            boxShadow: 'inset 0 1px 0 rgba(0,0,0,0.1)',
-            backgroundImage: 'linear-gradient(#008cdd,#008cdd 85%,#239adf)',
-          }, this.props.textStyle)}
-        >
+        <span className={this.props.buttonTextClassName}>
           {this.props.label}
         </span>
       </button>
